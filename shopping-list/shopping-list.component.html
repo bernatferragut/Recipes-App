@@ -1,0 +1,11 @@
+<div>
+  <md-toolbar >
+    <span>S H O P P I NG - L I S T</span>
+  </md-toolbar>
+  <app-shopping-edit
+  (ingredientAdded)="onIngredientAdded($event)"
+  ></app-shopping-edit>
+  <md-card  *ngFor="let ingredient of ingredients">
+    <md-card-subtitle> Ingredient: {{ ingredient.name }}, Amount: {{ ingredient.amount }} </md-card-subtitle>
+  </md-card>
+</div>

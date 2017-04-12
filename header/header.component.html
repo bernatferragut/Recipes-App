@@ -1,0 +1,35 @@
+<md-toolbar color="primary">
+<!--LEFT MENU-->
+  <button md-icon-button [mdMenuTriggerFor]="menu1" color="accent">
+      <md-icon>bookmark_border</md-icon>
+    </button>
+    <!--RECIPES-->
+  <md-menu #menu1="mdMenu">
+    <button md-menu-item (click)="onSelect('recipe')"> 
+        <md-icon>favorite_border</md-icon>
+        <a>RECIPES</a>
+      </button>
+      <!--SHOPPING-->
+    <button md-menu-item (click)="onSelect('shoppingList')">
+        <md-icon>list</md-icon>
+        <span>SHOPPING LIST</span>
+      </button>
+  </md-menu>
+<!--MAIN TITLE-->
+  <span class="main-title"> Recipe Book </span>
+  <span class="spacer"></span>
+<!--RIGHT MENU-->
+  <button md-icon-button [mdMenuTriggerFor]="menu2">
+      <md-icon>more_vert</md-icon>
+    </button>
+  <md-menu #menu2="mdMenu">
+    <button md-menu-item>
+        <md-icon>save</md-icon>
+        <span>Save Data</span>
+      </button>
+    <button md-menu-item>
+        <md-icon>input</md-icon>
+        <span>Fetch Data</span>
+      </button>
+  </md-menu>
+</md-toolbar>

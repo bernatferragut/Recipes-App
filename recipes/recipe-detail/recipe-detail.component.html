@@ -1,0 +1,26 @@
+<div>
+  <md-card>
+    <md-card-title>{{ recipe.name }}</md-card-title>
+    <md-card-subtitle>{{ recipe.description }}</md-card-subtitle>
+
+    <img md-card-image src="{{ recipe.image }}">
+    <!--MD MENU EXPAND DIRECTIVE-->
+    <button md-raised-button [mdMenuTriggerFor]="expand" color="primary">
+        <md-icon>expand_more</md-icon>MANAGE RECIPE</button>
+    <md-menu #expand="mdMenu">
+      <button md-menu-item>
+          <md-icon>favorite_border</md-icon>
+          <span>To Shopping List</span>
+        </button>
+      <button md-menu-item>
+          <md-icon>list</md-icon>
+          <span>Edit Recipe</span>
+        </button>
+      <button md-menu-item>
+          <md-icon>list</md-icon>
+          <span>Delete Recipe</span>
+        </button>
+    </md-menu>
+  </md-card>
+</div>
+

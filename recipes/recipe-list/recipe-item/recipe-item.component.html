@@ -1,0 +1,17 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>{{ recipe.name }}</md-card-title>
+    <!--<md-card-subtitle>Subtitle</md-card-subtitle>-->
+  </md-card-header>
+      <img md-card-image src="{{ recipe.image }}">
+  <md-card-content>
+    {{ recipe.description }}
+  </md-card-content>
+  <md-card-actions align="center">
+    <button  md-raised-button 
+      color="primary" 
+      (click)="onSelected()">
+      <md-icon>info</md-icon> Show Ingredients
+    </button>
+  </md-card-actions>
+</md-card>

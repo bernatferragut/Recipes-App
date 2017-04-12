@@ -1,0 +1,17 @@
+.flex-menu-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.main-title{
+    font-family: 'Berkshire Swash', cursive;
+    color: lightyellow;
+}

@@ -1,0 +1,14 @@
+<div class="list-padding">
+  <md-card>   
+    <button md-raised-button color="accent">NEW RECIPE</button>
+  </md-card>
+  <app-recipe-item 
+    *ngFor="let recipeEl of recipes" 
+    [recipe]="recipeEl"
+    (recipeSelected)="onRecipeSelected(recipeEl)">
+  </app-recipe-item>
+</div>
+
+
+
+

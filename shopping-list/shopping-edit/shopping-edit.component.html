@@ -1,0 +1,39 @@
+<div>
+  <md-card>
+    <form> 
+      <md-input-container floatPlaceholder="auto|always|never">
+        <input 
+          mdInput 
+          name="nameProperty" 
+          [(ngModel)]="nameProperty" type="search" 
+          required 
+          placeholder="NAME" 
+          #templateVariable 
+          maxLength="50"
+          #nameInput
+          >
+        <md-hint align="start|end">{{templateVariable.value.length}} / 50</md-hint>
+      </md-input-container>
+      <md-input-container floatPlaceholder="auto|always|never">
+        <input 
+          mdInput 
+          name="amountProperty" 
+          [(ngModel)]="amountProperty" 
+          type="number"
+          required 
+          placeholder="AMOUNT"
+          #amountInput
+          >
+      </md-input-container>
+        <button md-raised-button 
+          color="accent"
+          (click)=onAddItem()
+          >Add</button>
+        <button md-raised-button (click)="onClick" color="primary">Delete</button>
+        <button md-raised-button (click)="onClick" color="secondary">clear</button>
+        <p myDirective>Styling Directive Example</p>
+    </form>
+  </md-card>
+</div>
+
+

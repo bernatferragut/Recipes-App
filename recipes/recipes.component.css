@@ -1,0 +1,18 @@
+/*FLEX*/
+.container{
+    display: flex;
+    direction: row;
+}
+
+/*SIDE NAV*/
+.sidenav-container{
+    height: 60vh;
+}
+
+.sidenav-content{
+    width: 365px;
+}
+
+[md-raised-button]{
+    width: 100%;
+}
