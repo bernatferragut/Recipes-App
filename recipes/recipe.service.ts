@@ -29,7 +29,7 @@ export class RecipeService {
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
-        this.slService;
+        this.slService.addIngredients(ingredients);
 
     }
 

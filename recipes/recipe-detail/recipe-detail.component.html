@@ -1,9 +1,10 @@
 <div>
-  <md-card *ngFor="let ingredient of recipe.ingredients">
+  <md-card>
     <md-card-title>{{ recipe.name }}</md-card-title>
     <md-card-subtitle>{{ recipe.description }}</md-card-subtitle>
     <img md-card-image src="{{ recipe.image }}">
-    <md-card>{{ ingredient.name }} : {{ ingredient.amount }}</md-card>
+    <md-card *ngFor="let ingredient of recipe.ingredients">
+      {{ ingredient.name }} : {{ ingredient.amount }}</md-card>
 
     <!--MD MENU EXPAND DIRECTIVE-->
     <button md-raised-button [mdMenuTriggerFor]="expand" color="primary">
