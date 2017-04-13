@@ -9,7 +9,7 @@
     <button md-raised-button [mdMenuTriggerFor]="expand" color="primary">
         <md-icon>expand_more</md-icon>MANAGE RECIPE</button>
     <md-menu #expand="mdMenu">
-      <button md-menu-item>
+      <button (click)="onAddToShoppingList()" style="cursor: pointer"  md-menu-item>
           <md-icon>favorite_border</md-icon>
           <span>To Shopping List</span>
         </button>
