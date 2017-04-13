@@ -1,18 +1,22 @@
-import { Component, ViewChild, ViewContainerRef, Input, Output, EventEmitter} from '@angular/core';
+import { Component, ViewChild, ViewContainerRef, Input, Output, EventEmitter, OnInit} from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { MdSidenav, MdDialog, MdDialogConfig} from '@angular/material';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css']
 })
-export class RecipeListComponent {
+export class RecipeListComponent implements OnInit {
 
-recipes: Recipe[]= [
-  new Recipe('Vegan1', 'Description1: Vegan1 is ...', './assets/images/recipe.jpg'),
-  new Recipe('Vegan2', 'Description2: Vegan2 is ...', './assets/images/recipe.jpg'),
-  ];
+  recipes: Recipe[];
+
+  constructor( private recipeService: RecipeService ) { };
+
+  ngOnInit() {
+    this.recipes = this.recipeService.getRecipe();
+  }
 
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
 

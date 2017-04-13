@@ -13,4 +13,5 @@ export class AppComponent {
     this.loadedFeature = feature;
   }
 
+// no ts slint
 }
