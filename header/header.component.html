@@ -5,14 +5,14 @@
     </button>
     <!--RECIPES-->
   <md-menu #menu1="mdMenu">
-    <button md-menu-item (click)="onSelect('recipe')"> 
+    <button md-menu-item routerLink="/recipes"> 
         <md-icon>favorite_border</md-icon>
-        <a>RECIPES</a>
+        <span  >RECIPES</span>
       </button>
       <!--SHOPPING-->
-    <button md-menu-item (click)="onSelect('shoppingList')">
+    <button md-menu-item routerLink="/shopping-list">
         <md-icon>list</md-icon>
-        <span>SHOPPING LIST</span>
+        <span  >SHOPPING LIST</span>
       </button>
   </md-menu>
 <!--MAIN TITLE-->
