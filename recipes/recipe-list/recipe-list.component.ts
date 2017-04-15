@@ -1,3 +1,4 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, ViewChild, ViewContainerRef, Input, Output, EventEmitter, OnInit} from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { MdSidenav, MdDialog, MdDialogConfig} from '@angular/material';
@@ -12,7 +13,9 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[];
 
-  constructor( private recipeService: RecipeService ) { };
+  constructor( private recipeService: RecipeService,
+               private router: Router,
+               private route: ActivatedRoute) { };
 
   ngOnInit() {
     this.recipes = this.recipeService.getRecipe();
@@ -22,5 +25,9 @@ export class RecipeListComponent implements OnInit {
 
   onRecipeSelected(recipe: Recipe) {
     this.recipeWasSelected.emit(recipe);
+  }
+
+  onNewRecipe(){
+    this.router.navigate(['new'], {relativeTo: this.route});
   }
 }

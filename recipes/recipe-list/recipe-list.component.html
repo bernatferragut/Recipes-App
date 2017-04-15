@@ -1,6 +1,6 @@
 <div class="list-padding">
   <md-card>   
-    <button md-raised-button color="accent">NEW RECIPE</button>
+    <button md-raised-button color="accent" (click) = onNewRecipe()>NEW RECIPE</button>
   </md-card>
   <app-recipe-item 
     *ngFor="let recipeEl of recipes; let i = index" 
