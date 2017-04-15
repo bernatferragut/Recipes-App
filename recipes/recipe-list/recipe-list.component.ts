@@ -23,15 +23,4 @@ export class RecipeListComponent implements OnInit {
   onRecipeSelected(recipe: Recipe) {
     this.recipeWasSelected.emit(recipe);
   }
-
-
-
-
-// @ViewChild('sidenav') sidenav: MdSidenav;
-// currentRecipe = {};
-//   showDescription(recipe) {
-//     this.currentRecipe = recipe;
-//     console.log(recipe);
-//     this.openInfoSidenav.emit(this.sidenav.open());
-//   }
 }

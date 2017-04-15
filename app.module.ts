@@ -16,6 +16,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { AttributeDirective } from './shared/attribute.directive';
 import { ShoppingListService} from './shopping-list/shoppingList.service';
 import { AppRoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    AttributeDirective
+    AttributeDirective,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,
