@@ -3,8 +3,9 @@
     <button md-raised-button color="accent">NEW RECIPE</button>
   </md-card>
   <app-recipe-item 
-    *ngFor="let recipeEl of recipes" 
+    *ngFor="let recipeEl of recipes; let i = index" 
     [recipe]="recipeEl"
+    [index]="i"
     (recipeSelected)="onRecipeSelected(recipeEl)">
   </app-recipe-item>
 </div>
