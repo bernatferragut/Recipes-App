@@ -1,3 +1,80 @@
-<h3 align="center">
-  PLEAS SELECT A RECIPE ;)
-</h3>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="example-form">
+  <md-input-container class="example-full-width">
+    <input 
+      mdInput 
+      placeholder="ADD NEW RECIPE" 
+      disabled value="ADD YOUR NEW RECIPE"
+      ngModel
+      name="intro"
+      >
+  </md-input-container>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width">
+      <input 
+      mdInput 
+      placeholder="First name"
+      ngModel
+      name="firstname"
+      required>
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input 
+      mdInput 
+      placeholder="Long Last Name"
+      ngModel
+      name="lastname"
+      required>
+    </md-input-container></td>
+  </tr></table>
+
+  <p>
+    <md-input-container class="example-full-width">
+      <textarea 
+      mdInput 
+      placeholder="email adress"
+      ngModel
+      name="email"
+      required
+      email
+      >1600 Amphitheatre Pkwy</textarea>
+    </md-input-container>
+    <md-input-container class="example-full-width">
+      <textarea 
+      mdInput 
+      placeholder="Address 2"
+      ngModel
+      name="adress2">
+      </textarea>
+    </md-input-container>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width">
+      <input 
+      mdInput 
+      placeholder="City"
+      ngModel
+      name="city">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input 
+      mdInput 
+      placeholder="State"
+      ngModel
+      name="state">
+    </md-input-container></td>
+    <td><md-input-container class="example-full-width">
+      <input 
+      mdInput 
+      #postalCode 
+      maxlength="5" 
+      placeholder="Postal Code" 
+      value="94043"
+      ngModel
+      name="postalcode">
+      <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+    </md-input-container></td>
+  </tr></table>
+  <button class="submitButton" md-raised-button color="primary">ADD RECIPE</button>
+</form>
