@@ -1,4 +1,8 @@
-# APP TREE 
+# Recipe App
+
+> Recipe App made with the new angular CLI and Angular2.
+
+## App Tree 
 
 =====================================
 
