@@ -8,11 +8,9 @@
     {{ recipe.description }}
   </md-card-content>
   <md-card-actions align="center">
-    <button  
-      md-raised-button 
-      color="primary"
-      [routerLink]="[index]"
-      routerLinkActive="active">
+    <button  md-raised-button 
+      color="primary" 
+      (click)="onSelected()">
       <md-icon>info</md-icon> Show Ingredients
     </button>
   </md-card-actions>

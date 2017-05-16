@@ -2,20 +2,24 @@
 <!--RECIPE DETAIL RIGHT SIDEBAR-->
     <md-sidenav-container class="sidenav-container">
         <!--opened-->
-        <md-sidenav align="end" mode="side" class="sidenav-content" opened #sidenav>
+        <md-sidenav align="end" mode="side" class="sidenav-content" #sidenav>
             <md-tab-group>
                 <md-tab label="DETAILS">
-                    <!--ROUTER-->
-                    <router-outlet></router-outlet>
-                    <!--<button md-raised-button color="accent">CLOSE</button>-->
+                    <app-recipe-detail
+                    *ngIf="selectedRecipe"
+                    [recipe] = "selectedRecipe"
+                    ></app-recipe-detail>
+                    <button md-raised-button (click)="sidenav.close()" color="accent">CLOSE</button>
                 </md-tab>
-                <md-tab 
-                    label="FEED">...FEED CONTENT...
+                <md-tab label="FEED">...FEED CONTENT...
                 </md-tab>
             </md-tab-group>
         </md-sidenav>
         <!--RECIPE LIST-->
-        <app-recipe-list></app-recipe-list>
+        <app-recipe-list
+        (recipeWasSelected)="selectedRecipe=$event"
+        (recipeWasSelected)="sidenav.open()"
+        ></app-recipe-list>
     </md-sidenav-container>
 </div>
 

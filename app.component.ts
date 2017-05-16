@@ -1,5 +1,3 @@
-//  Main App component
-
 import { Component } from '@angular/core';
 
 @Component({
@@ -14,5 +12,5 @@ export class AppComponent {
   onNavigate(feature: string) {
     this.loadedFeature = feature;
   }
-// tslint:disable-next-line:eofline
+
 }

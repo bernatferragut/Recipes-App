@@ -1,33 +1,33 @@
-import { Router, ActivatedRoute } from '@angular/router';
-import { Component, ViewChild, ViewContainerRef, Input, Output, EventEmitter, OnInit} from '@angular/core';
+import { Component, ViewChild, ViewContainerRef, Input, Output, EventEmitter} from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { MdSidenav, MdDialog, MdDialogConfig} from '@angular/material';
-import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css']
 })
-export class RecipeListComponent implements OnInit {
+export class RecipeListComponent {
 
-  recipes: Recipe[];
+recipes: Recipe[]= [
+  new Recipe('Vegan1', 'Description1: Vegan1 is ...', './assets/images/recipe.jpg'),
+  new Recipe('Vegan2', 'Description2: Vegan2 is ...', './assets/images/recipe.jpg'),
+  ];
 
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
-
-  constructor( private recipeService: RecipeService,
-               private router: Router,
-               private route: ActivatedRoute) { };
-
-  ngOnInit() {
-    this.recipes = this.recipeService.getRecipe();
-  }
 
   onRecipeSelected(recipe: Recipe) {
     this.recipeWasSelected.emit(recipe);
   }
 
-  onNewRecipe(){
-    this.router.navigate(['new'], {relativeTo: this.route});
-  }
+
+
+
+// @ViewChild('sidenav') sidenav: MdSidenav;
+// currentRecipe = {};
+//   showDescription(recipe) {
+//     this.currentRecipe = recipe;
+//     console.log(recipe);
+//     this.openInfoSidenav.emit(this.sidenav.open());
+//   }
 }

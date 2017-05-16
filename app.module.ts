@@ -14,11 +14,6 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { AttributeDirective } from './shared/attribute.directive';
-import { ShoppingListService} from './shopping-list/shoppingList.service';
-import { AppRoutingModule } from './app-routing.module';
-import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
-import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
-
 
 @NgModule({
   declarations: [
@@ -30,18 +25,15 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    AttributeDirective,
-    RecipeStartComponent,
-    RecipeEditComponent
+    AttributeDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
-    AppRoutingModule
+    MaterialModule
   ],
-  providers: [ShoppingListService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
